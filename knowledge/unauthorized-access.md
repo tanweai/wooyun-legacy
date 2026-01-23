@@ -59,7 +59,7 @@
 
 | 向量 | 描述 | 实例 |
 |------|------|------|
-| 接口无认证 | API直接返回敏感数据 | 某互联网公司公众号平台 `/api/configs` 返回AppID和AppSecret |
+| 接口无认证 | API直接返回敏感数据 | 某公众号平台 `/api/configs` 返回AppID和AppSecret |
 | 权限校验缺失 | 仅验证登录不验证权限 | 人人网相册接口 `uid=`参数可遍历 |
 | 敏感信息泄露 | 调试接口暴露 | `/api/v1/admin_is_login` 判断逻辑暴露 |
 
@@ -483,7 +483,7 @@ rsync -avz ./local_file target_ip::module_name/
 | 案例 | Payload | 结果 |
 |------|---------|------|
 | 华云数据 | `?urlParam=../../../WEB-INF/web.xml%3f` | 配置文件泄露 |
-| TCL | `upload.aspx?id=8&dir=../../../../` | 目录浏览+任意删除 |
+| 某家电厂商 | `upload.aspx?id=8&dir=../../../../` | 目录浏览+任意删除 |
 | 某政府网站 | `down.php?dd=../down.php` | 源码下载 |
 | 某社交平台某社交平台 | `curl IP:8888/../../../etc/shadow` | 系统文件读取 |
 

