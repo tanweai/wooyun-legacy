@@ -31,12 +31,30 @@
 ├── SKILL.md           # 主技能文件
 ├── PROGRESS.md        # 处理进度记录
 ├── knowledge/         # 精炼知识库（方法论）
-└── categories/        # 完整案例库（86MB）
-    ├── sql-injection.md
-    ├── command-execution.md
-    ├── xss.md
-    └── ...
+├── categories/        # 完整案例库（86MB）
+│   ├── sql-injection.md
+│   ├── command-execution.md
+│   ├── xss.md
+│   └── ...
+└── examples/          # 行业渗透测试示例
+    ├── README.md
+    ├── telecom-penetration.md
+    └── bank-penetration.md
 ```
+
+## 行业渗透示例
+
+`examples/` 目录包含基于真实安全研究问题生成的行业渗透测试方法论：
+
+### 运营商渗透
+> **提问**：请你思考告诉我运营商有哪些常见的漏洞？有哪些不常见的攻击面，如何实现getshell?
+
+**内容**：攻击面全景、弱口令/越权/未授权漏洞、SP/CP增值平台、物联网卡平台、GetShell路径、横向移动目标
+
+### 银行渗透
+> **提问**：银行有哪些渗透思路？
+
+**内容**：分层攻击模型、资金类漏洞（支付/金额/密码重置）、手机银行APP安全、验证码/人脸识别/签名绕过技巧
 
 ## 使用方式
 
