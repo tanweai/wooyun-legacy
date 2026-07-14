@@ -1,3 +1,6 @@
+# 不维护决定
+随着ai的发展越来越厉害，其实skill没什么太多作用了。我们决定不维护了
+
 # WooYun Legacy
 
 [![Website](https://img.shields.io/badge/Website-wooyun.tanweagent.com-000?style=flat-square)](https://wooyun.tanweagent.com) [![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square)](LICENSE)
